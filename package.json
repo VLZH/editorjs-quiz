@@ -1,19 +1,35 @@
 {
-  "name": "editorjs-quiz",
-  "version": "1.0.0",
-  "description": "",
-  "main": "example/index.html",
-  "scripts": {
-    "start": "parcel example/index.html --open",
-    "build": "parcel build example/index.html"
-  },
-  "dependencies": {
-    "@editorjs/editorjs": "2.15.1",
-    "@editorjs/list": "1.4.0"
-  },
-  "devDependencies": {
-    "@babel/core": "7.2.0",
-    "parcel-bundler": "^1.6.1"
-  },
-  "keywords": []
+    "name": "editorjs-quiz",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/main.js",
+    "author": "vlzh",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/VLZH/editorjs-quiz"
+    },
+    "scripts": {
+        "start": "webpack --watch",
+        "build": "NODE_ENV=production webpack",
+        "start:example": "parcel example/index.html --open",
+        "build:example": "parcel build src/index.js"
+    },
+    "dependencies": {
+        "@editorjs/editorjs": "2.15.1",
+        "@editorjs/list": "1.4.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.6.0",
+        "@babel/preset-env": "^7.6.0",
+        "babel-loader": "^8.0.6",
+        "css-loader": "^3.2.0",
+        "parcel-bundler": "^1.6.1",
+        "webpack": "^4.40.2",
+        "webpack-cli": "^3.3.9",
+        "iso-morphic-style-loader": "^2.0.1"
+    },
+    "keywords": [],
+    "prettier": {
+        "tabWidth": 4
+    }
 }
